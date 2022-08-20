@@ -16,3 +16,47 @@ code {
   font-weight: 1000;
 
 }
+
+.loading {
+  width:100vw;
+  height:100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+button{
+  margin: 10px;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+.center{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+}
+.column{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 20vw;
+}
+.flex{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.strong{
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.item{
+  width: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
