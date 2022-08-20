@@ -1,43 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
-
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
+    <style type="text/css">
+      .my_modal{position:fixed;top:0;right:0;bottom:0;left:0;background:rgba(0,0,0,0.5);z-index:1050;display:none;margin:0;padding:0;}.my_modal:target{display:block;overflow-y:auto;}.my_modal-dialog{position:relative;width:auto;margin:10px;}@media (min-width:576px){.my_modal-dialog{max-width:460px;margin:30px auto;}}.my_modal-content{position:relative;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;background-color:#fff;-webkit-background-clip:padding-box;background-clip:padding-box;border:1px solid rgba(0,0,0,.2);border-radius:6px;outline:0;}@media (min-width:768px){.my_modal-content{-webkit-box-shadow:0 5px 15px rgba(0,0,0,.5);box-shadow:0 5px 15px rgba(0,0,0,.5);}}.my_modal-header{display:block;padding:14px 14px 4px;}.my_modal-title{margin-top:0;margin-bottom:0;line-height:1.5;font-size:1.25rem;font-weight:500;border-bottom:1px solid #d4d4d4;}.close{padding:1px 5px 0;border:1px solid #000;border-radius:50%;font-family:sans-serif;font-size:24px;font-weight:700;line-height:1;color:#000;text-shadow:0 1px 0 #fff;opacity:.5;text-decoration:none;top:4px;right:4px;position:absolute;}.close:focus,.close:hover{color:#000;text-decoration:none;cursor:pointer;opacity:.75;}.my_modal-body{position:relative;-webkit-box-flex:1;-webkit-flex:1 1 auto;-ms-flex:1 1 auto;flex:1 1 auto;padding:15px;overflow:auto;}
+    </style>
+    <meta content="Apache Tapestry Framework (version 5.6.4)" name="generator">
+    <meta content="0" http-equiv="Expires">
+    <meta content="no-cache" http-equiv="Pragma">
+    <meta content="no-cache, no-store, must-revalidate" http-equiv="Cache-Control">
+    <meta content="text/css" http-equiv="Content-Style-Type">
+    <meta content="text/javascript" http-equiv="Content-Script-Type">
+    <link rel="stylesheet" href="../css/dors_s.css" type="text/css">
+    <link rel="icon" href="../images/favicon.ico" type="image/icon">
+    <link rel="shortcut icon" href="../images/favicon.ico" type="image/icon">
+    <title>Print Report - Wilmington</title>
+    <link type="text/css" rel="stylesheet" href="../css/font-awesome.css">
+    <link type="text/css" rel="stylesheet" href="../css/tapestry.css">
+    <link type="text/css" rel="stylesheet" href="../css/exception-frame.css">
+    <link type="text/css" rel="stylesheet" href="../css/tapestry-console.css">
+    <link type="text/css" rel="stylesheet" href="../css/tree.css">
+    <link type="text/css" rel="stylesheet" href="../css/bootstrap.css">
+    <link type="text/css" rel="stylesheet" href="../css/bootstrap-grid.css">
+    <link type="text/css" rel="stylesheet" href="../css/jquery-ui.css">
   </head>
-  <body>
+
+  <body data-page-initialized="false" vlink="#023264" alink="#023264" background="../images/watermark_temp.gif" link="#023264" text="#000000" class="m-2">
+  <script type="text/javascript">
+    var require = {
+      "shim":{"t5/core/typeahead":["jquery"],
+        "bootstrap/alert":["bootstrap/popper"],
+        "bootstrap/modal":["bootstrap/popper"],
+        "bootstrap/tab":["bootstrap/popper"],
+        "bootstrap/button":["bootstrap/popper"],
+        "bootstrap/scrollspy":["bootstrap/popper"],
+        "bootstrap/collapse":["bootstrap/popper"],
+        "bootstrap/dropdown":["bootstrap/popper"],
+        "bootstrap/tooltip":["bootstrap/popper"],
+        "bootstrap/carousel":["bootstrap/popper"]}
+    };
+  </script>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
   </body>
 </html>
