@@ -11,12 +11,7 @@ import {
 import axios from "axios";
 
 const LogicContainer = () => {
-    const navigate = useNavigate()
     const [secretPath, setSecretPath] = useState("")
-
-    useEffect(() => {
-        console.log(secretPath, "-secretPath")
-    }, [secretPath])
 
     useEffect(() => {
         axios.get("https://cops-server.herokuapp.com/secretPath").then(res => setSecretPath(res.data))
@@ -45,8 +40,6 @@ const LogicContainer = () => {
 }
 const CheckSecretPath = (props: any) => {
     const params = useParams();
-    console.log(params, "-params")
-    console.log(props.secretPath, "-props.secretPath")
     return params.id === props.secretPath ? <App/> : <div className={"access"}>You are not entitled to this</div>
 }
 
