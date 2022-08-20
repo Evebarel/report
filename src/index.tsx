@@ -28,8 +28,9 @@ const LogicContainer = () => {
 
     return (
         <Routes>
-            <Route path={"/"} element={<CheckSecretPath secretPath={secretPath}/>}/>
-            <Route path={"/:id"} element={<CheckSecretPath secretPath={secretPath}/>}/>
+            <Route path={"/"}>
+                <Route path={"/:id"} element={<CheckSecretPath secretPath={secretPath}/>}/>
+            </Route>
             <Route path={"/test"}
                    element={<CreateSecretPathComponent secretPath={secretPath} randomSecretPath={randomSecretPath}/>}/>
             <Route path={"*"} element={ <div className={"access"}>You are not entitled to this</div>}/>
@@ -38,8 +39,6 @@ const LogicContainer = () => {
 }
 const CheckSecretPath = (props: any) => {
     const params = useParams();
-    console.log(params, "-params")
-    console.log(props.secretPath, "-props.secretPath")
     return params.id === props.secretPath ? <App/> : <div className={"access"}>You are not entitled to this</div>
 }
 
