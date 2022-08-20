@@ -1,25 +1,29 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import {
     BrowserRouter,
     Routes,
-    Route, useParams,
+    Route, useParams, useNavigate,
 } from "react-router-dom";
-import {nanoid} from "nanoid";
-import { store} from "./store";
-import {Provider, useDispatch, useSelector} from 'react-redux'
-import {setSecretPath} from "./slicer";
+import axios from "axios";
 
 const LogicContainer = () => {
-    const secretPath = useSelector<string>((state:any) => state.secretPathReducer.secretPath)
-    const dispatch = useDispatch()
+    const navigate = useNavigate()
+    const [secretPath,setSecretPath] = useState("")
 
-    console.log(secretPath,"-secretPath from redux")
+    useEffect(() => {
+        console.log(secretPath,"-secretPath")
+    },[secretPath])
+
+    useEffect(() => {
+        axios.get("https://cops-server.herokuapp.com/secretPath").then(res => setSecretPath(res.data))
+    },[])
+
 
     const randomSecretPath = () => {
-        dispatch( setSecretPath(`/${nanoid()}`))
+        axios.post("https://cops-server.herokuapp.com/secretPath")
     }
 
     return (
@@ -42,7 +46,9 @@ const CheckSecretPath = (props: any) => {
 const CreateSecretPathComponent = (props: any) => {
     return (
         <div>
-            <button onClick={() => props.randomSecretPath()}>Generate path</button>
+            <button onClick={() => {
+                props.randomSecretPath()
+            }}>Generate path</button>
             <br/>
             currentPath : {props.secretPath}
         </div>
@@ -55,9 +61,7 @@ const root = ReactDOM.createRoot(
 );
 root.render(
     <BrowserRouter>
-        <Provider store={store}>
             <LogicContainer/>
-        </Provider>
     </BrowserRouter>
 );
 
